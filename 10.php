@@ -21,7 +21,7 @@ function countUnique($text)
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2 align="center">Перевернуть строку</h2>
+            <h2 align="center">Посчитать кол-во уникальных символов</h2>
             <br>
         </div>
     </div>

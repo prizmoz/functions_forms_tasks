@@ -5,7 +5,6 @@
  */
 
 function stringReverse($string){
-    $string = 'abcde';
     $new_string = '';
     for ($i = strlen($string) - 1; $i >=0; $i--){
         $new_string .= $string[$i];
@@ -45,7 +44,7 @@ function stringReverse($string){
     <div class="row">
         <?php
         if (!empty($_POST)) {
-            echo "<div class=\"col-md-12 alert alert-success\">" . stringReverse($_POST[$text]) . "</div>";
+            echo "<div class=\"col-md-12 alert alert-success\">" . stringReverse($_POST['text']) . "</div>";
         }
         ?>
     </div>
