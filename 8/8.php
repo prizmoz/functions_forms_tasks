@@ -11,10 +11,9 @@ function stopBadWords($string, $stopWords)
 {
     $string = mb_strtolower($string);
     foreach ($stopWords as $word) {
-        if ((strpos($word, $string)) !== false) {
+        if ((strpos($string, $word)) !== false) {
             $error = true;
             return $error;
-            break;
         }
     }
 }
@@ -33,8 +32,6 @@ if (!empty(trim($_POST['name'])) && !empty(trim($_POST['message']))) {
         $file = fopen('comments.txt', 'a');
         fwrite($file, $strComment . PHP_EOL);
         fclose($file);
-    } else {
-        $error = "Некорректный комментарий";
     }
 }
 if (file_exists('comments.txt')){
@@ -59,8 +56,8 @@ if (file_exists('comments.txt')){
             <br>
         </div>
     </div>
-    <? if ($error === "Некорректный комментарий"):?>
-    <div class="row alert alert-danger"><?=$error?></div>
+    <? if ($error):?>
+    <div class="row alert alert-danger"><?="Нежелательный комментарий"?></div>
     <?endif;?>
     <?foreach ($comments as $comment) : ?>
         <div class="row">

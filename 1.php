@@ -21,13 +21,7 @@ if (!empty($_POST)) {
 	$text1 = htmlentities($_POST['text1']);
 	$text2 = htmlentities($_POST['text2']);
 	$result = getCommonWords($text1,$text2); // массив с общими словами
-	foreach ($result as $key => $word) {
-		if ($key < count($result) - 1) {
-			$resultText .= $word . ', ';
-		} else {
-			$resultText .= $word . '.';
-		}
-	}
+	$resultText = implode(', ', $result);
 }
 ?>
 <html>

@@ -13,15 +13,7 @@ if (!empty($_POST)) {
 
     });
 
-    $res = '';
-    foreach ($arr as $key => $word) {
-        if ($key < 2) {
-            $res .= "{$word}, ";
-        }
-        elseif ($key == 2) {
-            $res .= "{$word}";
-        }
-    }
+    $res = $arr[0] . ', ' . $arr[1] . ', ' . $arr[2] . '.';
 
 }
 
