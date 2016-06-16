@@ -4,10 +4,6 @@
  * Все загруженные фото должны помещаться в папку gallery и выводиться на странице в виде таблицы.
  */
 include_once 'functions.php';
-error_reporting(E_ALL);
-//echo '<pre>';
-//print_r($_FILES['user_img']);
-//echo '</pre>';
 
 if (isset($_FILES['user_img'])) {
     if (!is_dir(__DIR__ . '/gallery')) {
