@@ -9,7 +9,6 @@ if (!empty($_POST)){
     $n = $_POST['n'];
     $arr = file('3.txt');
     $file = fopen('3.txt', 'w');
-    echo '<br>';
     foreach ($arr as $key => $line) {
         if ((mb_strlen(trim($line)) > $n)) {
             unset($arr[$key]);
@@ -45,14 +44,12 @@ if (!empty($_POST)){
             </form>
         </div>
     </div>
-    <!--
     <div class="row">
         <?php
         if ($success == 1) {
             echo "<div class=\"col-md-12 alert alert-success\">Строки удалены</div>";
         }
         ?>
-     -->
 </div>
 </div>
 </body>
